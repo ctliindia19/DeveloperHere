@@ -1,0 +1,8 @@
+Feature: Open application and verify all links are accessible
+
+  @SanityRun
+  Scenario: Verify all links into the webpage contains documentation and ignore anything not matched with application url # DeveloperHereLinkVerification.feature:5
+    Given User enter the Application URL                                                                                  # HomeStepDefinition.user_enter_the_Application_URL()
+    When User navigate to Home page                                                                                       # HomeStepDefinition.user_navigate_to_Home_page()
+    Then User verify all links contains documentation and ignore anything outside Application URL                         # HomeStepDefinition.user_verify_all_links_contains_documentation_and_ignore_anything_outside_Application_URL()
+    And User close the browser                                                                                            # HomeStepDefinition.user_close_the_browser()

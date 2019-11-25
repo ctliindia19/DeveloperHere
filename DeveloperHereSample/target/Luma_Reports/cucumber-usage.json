@@ -1,0 +1,74 @@
+[
+  {
+    "source": "^User verify all links contains documentation and ignore anything outside Application URL$",
+    "steps": [
+      {
+        "name": "User verify all links contains documentation and ignore anything outside Application URL",
+        "aggregatedDurations": {
+          "average": 67.741614832,
+          "median": 67.741614832
+        },
+        "durations": [
+          {
+            "duration": 67.741614832,
+            "location": "DeveloperHereLinkVerification.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User enter the Application URL$",
+    "steps": [
+      {
+        "name": "User enter the Application URL",
+        "aggregatedDurations": {
+          "average": 16.271133376,
+          "median": 16.271133376
+        },
+        "durations": [
+          {
+            "duration": 16.271133376,
+            "location": "DeveloperHereLinkVerification.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User close the browser$",
+    "steps": [
+      {
+        "name": "User close the browser",
+        "aggregatedDurations": {
+          "average": 0.883555625,
+          "median": 0.883555625
+        },
+        "durations": [
+          {
+            "duration": 0.883555625,
+            "location": "DeveloperHereLinkVerification.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User navigate to Home page$",
+    "steps": [
+      {
+        "name": "User navigate to Home page",
+        "aggregatedDurations": {
+          "average": 6.815276261,
+          "median": 6.815276261
+        },
+        "durations": [
+          {
+            "duration": 6.815276261,
+            "location": "DeveloperHereLinkVerification.feature:7"
+          }
+        ]
+      }
+    ]
+  }
+]
