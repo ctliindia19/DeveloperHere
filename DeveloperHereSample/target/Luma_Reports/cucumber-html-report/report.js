@@ -44,28 +44,28 @@ formatter.match({
   "location": "HomeStepDefinition.user_enter_the_Application_URL()"
 });
 formatter.result({
-  "duration": 16271133376,
+  "duration": 17840627828,
   "status": "passed"
 });
 formatter.match({
   "location": "HomeStepDefinition.user_navigate_to_Home_page()"
 });
 formatter.result({
-  "duration": 6815276261,
+  "duration": 5062145393,
   "status": "passed"
 });
 formatter.match({
   "location": "HomeStepDefinition.user_verify_all_links_contains_documentation_and_ignore_anything_outside_Application_URL()"
 });
 formatter.result({
-  "duration": 67741614832,
+  "duration": 86311582393,
   "status": "passed"
 });
 formatter.match({
   "location": "HomeStepDefinition.user_close_the_browser()"
 });
 formatter.result({
-  "duration": 883555625,
+  "duration": 1010449172,
   "status": "passed"
 });
 });

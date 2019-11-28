@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="91.71158">
-<testcase classname="Open application and verify all links are accessible" name="Verify all links into the webpage contains documentation and ignore anything not matched with application url" time="91.71158">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="110.224805">
+<testcase classname="Open application and verify all links are accessible" name="Verify all links into the webpage contains documentation and ignore anything not matched with application url" time="110.224805">
 <system-out><![CDATA[Given User enter the Application URL........................................passed
 When User navigate to Home page.............................................passed
 Then User verify all links contains documentation and ignore anything outside Application URL.passed

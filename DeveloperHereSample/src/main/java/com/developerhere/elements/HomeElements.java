@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 
 
 import com.developerhere.base.BaseClass;
+import com.developerhere.util.AdditionalConditions;
 
 
 
@@ -41,6 +42,9 @@ public class HomeElements extends BaseClass {
     
 	public void openApplicationURL() {
 		driver.get(homePage);
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		wait.until(AdditionalConditions.angularHasFinishedProcessing());
+		System.out.println("Angular was initialized.."+AdditionalConditions.angularHasFinishedProcessing());
 	}
      
 	@FindBy (partialLinkText="Sign up")
@@ -56,7 +60,7 @@ public class HomeElements extends BaseClass {
     
     public void verifyLinks() {
         
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = driver.findElements(By.xpath("//a"));
         Iterator<WebElement> it = links.iterator();
         while(it.hasNext()){
             url = it.next().getAttribute("href");
@@ -75,15 +79,17 @@ public class HomeElements extends BaseClass {
                 huc.connect();
                 respCode = huc.getResponseCode();
                 
+                
                 if(respCode >=300 && respCode <200){
                     //System.out.println(url+" is a broken link");
                     invalidUrlList.add(url);
                 }
                 else{
                     //System.out.println(url+" is a valid link");
+                	WebDriverWait wait = new WebDriverWait(driver, 15, 100);
+                    wait.until(AdditionalConditions.angularHasFinishedProcessing());
                     validUrlList.add(url);
-//                    WebDriverWait wait = new WebDriverWait(driver, 15, 100);
-//                    wait.until(AdditionalConditions.angularHasFinishedProcessing());
+                    
                 }
                     
             } catch (MalformedURLException e) {
