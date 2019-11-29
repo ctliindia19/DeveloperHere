@@ -86,7 +86,9 @@ public class HomeElements extends BaseClass {
                 }
                 else{
                     //System.out.println(url+" is a valid link");
-                	
+                	WebDriverWait wait=new WebDriverWait(driver, 20);
+            		wait.until(AdditionalConditions.angularHasFinishedProcessing());
+            		System.out.println("Angular was initialized.."+AdditionalConditions.angularHasFinishedProcessing());
                     validUrlList.add(url);
                     
                 }
