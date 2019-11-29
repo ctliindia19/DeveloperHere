@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.developerhere.runner.RunnerClassTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 113.17 sec - in com.developerhere.runner.RunnerClassTest
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76.589 sec - in com.developerhere.runner.RunnerClassTest

@@ -1,9 +1,11 @@
 package com.developerhere.stepdefinitions;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.developerhere.base.BaseClass;
 import com.developerhere.elements.HomeElements;
+import com.developerhere.util.AdditionalConditions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -35,6 +37,9 @@ public class HomeStepDefinition extends BaseClass {
 	    System.out.println("List of all valid link");
 	    for (String s : validUrlList)
 	    {
+	    	WebDriverWait wait=new WebDriverWait(driver, 20);
+    		wait.until(AdditionalConditions.angularHasFinishedProcessing());
+    		System.out.println("Angular was initialized.."+AdditionalConditions.angularHasFinishedProcessing());
 	    	System.out.println(s);
 	    }
 	}

@@ -42,9 +42,7 @@ public class HomeElements extends BaseClass {
     
 	public void openApplicationURL() {
 		driver.get(homePage);
-		WebDriverWait wait=new WebDriverWait(driver, 20);
-		wait.until(AdditionalConditions.angularHasFinishedProcessing());
-		System.out.println("Angular was initialized.."+AdditionalConditions.angularHasFinishedProcessing());
+		
 	}
      
 	@FindBy (partialLinkText="Sign up")
@@ -60,14 +58,16 @@ public class HomeElements extends BaseClass {
     
     public void verifyLinks() {
         
-        List<WebElement> links = driver.findElements(By.xpath("//a"));
+       // List<WebElement> links = driver.findElements(By.xpath("//a"));
+        List<WebElement> links = driver.findElements(By.xpath("//div[@class='dp-content-block documentation_link_grid']//a"));
+        System.out.println("Link count.."+links.size());
         Iterator<WebElement> it = links.iterator();
         while(it.hasNext()){
             url = it.next().getAttribute("href");
             //System.out.println(url);
             
-            if(url.startsWith(homePage))
-          //if (!url.contains("/documentation"))
+            //if(url.startsWith(homePage))
+          if (url.contains("/documentation"))
             {
 //                System.out.println("URL belongs to another domain, skipping it.");
 //                continue;
@@ -86,8 +86,7 @@ public class HomeElements extends BaseClass {
                 }
                 else{
                     //System.out.println(url+" is a valid link");
-                	WebDriverWait wait = new WebDriverWait(driver, 15, 100);
-                    wait.until(AdditionalConditions.angularHasFinishedProcessing());
+                	
                     validUrlList.add(url);
                     
                 }
